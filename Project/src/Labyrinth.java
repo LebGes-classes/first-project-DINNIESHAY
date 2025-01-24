@@ -27,7 +27,6 @@ public class Labyrinth {
     }
 
     public boolean isClearPosition(int x, int y) {
-
         return grid[y][x] == ' ' || grid[y][x] == '✻';
     }
 }

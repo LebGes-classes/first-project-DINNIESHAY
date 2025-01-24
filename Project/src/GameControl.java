@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class GameControl {
 
     private final Menu menu = new Menu();
@@ -12,13 +10,15 @@ public class GameControl {
         menu.printWelcome();
         Services.getInput();
         menu.printMenu();
+        processMenuChoice();
+    }
 
-        Scanner in = new Scanner(System.in);
+    private void processMenuChoice() {
         String input;
         boolean gameStarted = false;
 
         while (!gameStarted) {
-            input = in.nextLine();
+            input = Services.getInput();
             if (input.equals("1")) {
                 gameStarted = true;
             }

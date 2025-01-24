@@ -116,11 +116,6 @@ public class GameControl {
     private void restartLevel() {
         System.out.println("Oops! You hit a wall!\nPress any key to start again...");
         Services.getInput();
-        placePlayerToStart();
-    }
-
-    private void placePlayerToStart() {
-        player.x = 1;
-        player.y = 1;
+        player.placePlayerToStart();
     }
 }

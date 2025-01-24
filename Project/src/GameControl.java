@@ -8,7 +8,7 @@ public class GameControl {
     private Labyrinth labyrinth;
     private Player player;
 
-    public void open() {
+    public void openGame() {
         menu.printWelcome();
         Services.getInput();
         menu.printMenu();
@@ -28,16 +28,16 @@ public class GameControl {
                 menu.printMenu();
             }
             else if (input.equals("3")) {
-                exit();
+                exitGame();
                 return;
             } else {
                 System.out.println("Wrong button. Try again.");
             }
         }
-        start();
+        startGame();
     }
 
-    private void start() {
+    private void startGame() {
         for (int level = 1; level <= numberOfLevels; level++) {
             char[][] grid = levelGenerator.generateLevel(level);
             labyrinth = new Labyrinth(grid);
@@ -54,7 +54,7 @@ public class GameControl {
         }
     }
 
-    private void exit() {
+    private void exitGame() {
         Services.clearConsole();
         System.out.println("Exiting the game...");
     }

@@ -1,0 +1,15 @@
+Purpose of the game:
+The player must find a way out of the maze by moving along its corridors and avoiding dead ends.
+
+Moving rules:
+The player can only move along the free corridors of the labyrinth.
+Walls and obstacles block movement.
+
+Control keys:
+-W- up
+-S- down
+-A- left
+-D- right
+
+
+Press any key to go back to menu...

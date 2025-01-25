@@ -48,8 +48,11 @@ public class GameControl {
             if (level == numberOfLevels) {
                 System.out.println("CONGRATULATIONS! YOU'VE PASSED THE GAME!\n");
             } else {
-                System.out.println("YOU PASSED LEVEL " + level +"!\nPress any key to continue...");
-                Services.getInput();
+                System.out.println("YOU PASSED LEVEL " + level +"!\n\nPress -E- to exit the game\nPress any other key to continue...");
+                if (Services.getInput().equals("E")) {
+                    exitGame();
+                    return;
+                }
             }
         }
     }
